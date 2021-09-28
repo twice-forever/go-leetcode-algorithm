@@ -10,5 +10,7 @@ func main() {
 
 	// problem.AddTwoNumbers2(&problem.L11, &problem.L21)
 
-	fmt.Println(problem.LengthOfLongestSubstring("au"))
+	// fmt.Println(problem.LengthOfLongestSubstring("au"))
+
+	fmt.Println(problem.FindMedianSortedArrays(problem.Nums1, problem.Nums2))
 }
