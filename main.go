@@ -12,5 +12,7 @@ func main() {
 
 	// fmt.Println(problem.LengthOfLongestSubstring("au"))
 
-	fmt.Println(problem.FindMedianSortedArrays(problem.Nums1, problem.Nums2))
+	// fmt.Println(problem.FindMedianSortedArrays(problem.Nums1, problem.Nums2))
+
+	fmt.Println(problem.LongestPalindrome("ac"))
 }
