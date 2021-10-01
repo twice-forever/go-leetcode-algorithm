@@ -8,7 +8,7 @@ func Reverse(x int) int {
 		x = x / 10
 	}
 
-	if int(int32(n)) != n {
+	if n < -2147483648 || n > 2147483647 {
 		return 0
 	}
 	return n
