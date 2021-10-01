@@ -16,5 +16,7 @@ func main() {
 
 	// fmt.Println(problem.LongestPalindrome("ac"))
 
-	fmt.Println(problem.ZigzagConvert("PAYPALISHIRING", 3))
+	// fmt.Println(problem.ZigzagConvert("PAYPALISHIRING", 3))
+
+	fmt.Println(problem.Reverse(123))
 }
