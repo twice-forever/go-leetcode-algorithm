@@ -18,5 +18,7 @@ func main() {
 
 	// fmt.Println(problem.ZigzagConvert("PAYPALISHIRING", 3))
 
-	fmt.Println(problem.Reverse(123))
+	// fmt.Println(problem.Reverse(123))
+
+	fmt.Println(problem.MyAtoi("42"))
 }
