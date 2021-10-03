@@ -20,5 +20,7 @@ func main() {
 
 	// fmt.Println(problem.Reverse(123))
 
-	fmt.Println(problem.MyAtoi("42"))
+	// fmt.Println(problem.MyAtoi("42"))
+
+	fmt.Println(problem.IsPalindrome(123321))
 }
