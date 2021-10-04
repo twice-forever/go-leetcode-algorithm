@@ -22,5 +22,7 @@ func main() {
 
 	// fmt.Println(problem.MyAtoi("42"))
 
-	fmt.Println(problem.IsPalindrome(123321))
+	// fmt.Println(problem.IsPalindrome(123321))
+
+	fmt.Println(problem.IsMatch("a", "ab*"))
 }
