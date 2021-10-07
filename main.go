@@ -24,5 +24,7 @@ func main() {
 
 	// fmt.Println(problem.IsPalindrome(123321))
 
-	fmt.Println(problem.IsMatch("a", "ab*"))
+	// fmt.Println(problem.IsMatch("a", "ab*"))
+
+	fmt.Println(problem.MaxArea([]int{1, 2, 1}))
 }
