@@ -26,5 +26,9 @@ func main() {
 
 	// fmt.Println(problem.IsMatch("a", "ab*"))
 
-	fmt.Println(problem.MaxArea([]int{1, 2, 1}))
+	// fmt.Println(problem.MaxArea([]int{1, 2, 1}))
+
+	// fmt.Println(problem.GenerateTrees(3))
+
+	fmt.Println(problem.NumTrees(19))
 }
