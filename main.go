@@ -30,5 +30,7 @@ func main() {
 
 	// fmt.Println(problem.GenerateTrees(3))
 
-	fmt.Println(problem.NumTrees(19))
+	// fmt.Println(problem.NumTrees(19))
+
+	fmt.Println(problem.IsSymmetric(&problem.TreeNode{Val: 1}))
 }
