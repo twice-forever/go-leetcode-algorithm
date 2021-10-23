@@ -1,26 +1,21 @@
 package problem
 
 func isBalanced(root *TreeNode) bool {
-	_, isB := deepBool(root, 0)
-	return isB
+	return height(root) >= 0
 }
 
-func deepBool(node *TreeNode, deep int) (int, bool) {
+func height(node *TreeNode) int {
 	if node == nil {
-		return deep - 1, true
+		return 0
 	}
-	leftDeep, leftB := deepBool(node.Left, deep+1)
-	rightDeep, rightB := deepBool(node.Right, deep+1)
-	if !leftB || !rightB {
-		return deep, false
+
+	leftHeight := height(node.Left)
+	rightHeight := height(node.Right)
+
+	if leftHeight == -1 || rightHeight == -1 || abs(leftHeight-rightHeight) > 1 {
+		return -1
 	}
-	if abs(leftDeep-rightDeep) > 1.0 {
-		return deep, false
-	}
-	if leftDeep > rightDeep {
-		return leftDeep, true
-	}
-	return rightDeep, true
+	return max(leftHeight, rightHeight) + 1
 }
 
 func abs(x int) int {
