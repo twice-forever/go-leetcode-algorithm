@@ -1,15 +1,16 @@
 package problem
 
 func preorderTraversalii(root *TreeNode) []int {
-	if root == nil {
-		return nil
+	var vals []int
+	var preorder func(*TreeNode)
+	preorder = func(node *TreeNode) {
+		if node == nil {
+			return
+		}
+		vals = append(vals, node.Val)
+		preorder(node.Left)
+		preorder(node.Right)
 	}
-
-	var slice []int
-	slice = append(slice, root.Val)
-	leftSlice := preorderTraversalii(root.Left)
-	slice = append(slice, leftSlice...)
-	rightSlice := preorderTraversalii(root.Right)
-	slice = append(slice, rightSlice...)
-	return slice
+	preorder(root)
+	return vals
 }
