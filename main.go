@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"leetcode/problem"
 )
 
@@ -36,5 +35,7 @@ func main() {
 
 	// fmt.Println(problem.BuildTree([]int{3, 9, 20, 15, 7}, []int{9, 3, 15, 20, 7}))
 
-	fmt.Println(problem.BuildTree2([]int{9, 3, 15, 20, 7}, []int{9, 15, 7, 20, 3}))
+	// fmt.Println(problem.BuildTree2([]int{9, 3, 15, 20, 7}, []int{9, 15, 7, 20, 3}))
+
+	problem.RunTest()
 }
