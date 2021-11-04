@@ -87,7 +87,9 @@ func (this *Codec) deserialize(data string) *TreeNode {
 				break
 			}
 		}
-		nodeSlice = append(nodeSlice, val)
+		if strSlice[i] != "null" {
+			nodeSlice = append(nodeSlice, val)
+		}
 		val = &TreeNode{}
 	}
 	return root
@@ -98,4 +100,5 @@ func RunTest() {
 
 	fmt.Println(codec.serialize(TestNode))
 	fmt.Println(codec.deserialize(codec.serialize(TestNode)))
+	fmt.Println(codec.serialize(codec.deserialize(codec.serialize(TestNode))))
 }
