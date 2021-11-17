@@ -1,10 +1,7 @@
 package problem
 
 func isSubtree(root *TreeNode, subRoot *TreeNode) bool {
-	if root == nil && subRoot == nil {
-		return true
-	}
-	if subRoot == nil || root == nil {
+	if root == nil {
 		return false
 	}
 	leftEqual := isSubtree(root.Left, subRoot)
