@@ -1,25 +1,14 @@
 package problem
 
 func mergeTrees(root1 *TreeNode, root2 *TreeNode) *TreeNode {
-	root := root1
-
-	if root != nil && root2 != nil {
-		root.Val += root2.Val
-	} else if root == nil && root2 != nil {
-		root = &TreeNode{Val: root2.Val}
-	} else if root == nil && root2 == nil {
-		return nil
-	} else if root != nil && root2 == nil {
-		return root
+	if root1 == nil {
+		return root2
 	}
-
-	if root.Left == nil && root2.Left != nil {
-		root.Left = &TreeNode{}
+	if root2 == nil {
+		return root1
 	}
-	if root.Right == nil && root2.Right != nil {
-		root.Right = &TreeNode{}
-	}
-	mergeTrees(root.Left, root2.Left)
-	mergeTrees(root.Right, root2.Right)
-	return root
+	root1.Val += root2.Val
+	root1.Left = mergeTrees(root1.Left, root2.Left)
+	root1.Right = mergeTrees(root1.Right, root2.Right)
+	return root1
 }
