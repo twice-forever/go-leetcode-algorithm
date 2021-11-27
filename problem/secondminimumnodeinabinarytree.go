@@ -1,28 +1,18 @@
 package problem
 
-import "math"
-
 func findSecondMinimumValue(root *TreeNode) int {
-	if root.Left == nil {
-		return -1
-	}
-	secondMin := math.MaxInt32
-	hasSecond := false
+	secondMin := -1
 	var findValue func(node *TreeNode)
 	findValue = func(node *TreeNode) {
-		if node == nil {
+		if node == nil || secondMin != -1 && root.Val >= secondMin {
 			return
 		}
-		if secondMin >= node.Val && node.Val > root.Val {
-			hasSecond = true
+		if node.Val > root.Val {
 			secondMin = node.Val
 		}
 		findValue(node.Left)
 		findValue(node.Right)
 	}
 	findValue(root)
-	if !hasSecond {
-		return -1
-	}
 	return secondMin
 }
