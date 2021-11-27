@@ -5,18 +5,10 @@ func insertIntoBST(root *TreeNode, val int) *TreeNode {
 		return &TreeNode{Val: val}
 	}
 	if root.Val > val {
-		if root.Left != nil {
-			insertIntoBST(root.Left, val)
-		} else {
-			root.Left = &TreeNode{Val: val}
-		}
+		root.Left = insertIntoBST(root.Left, val)
 	}
 	if root.Val < val {
-		if root.Right != nil {
-			insertIntoBST(root.Right, val)
-		} else {
-			root.Right = &TreeNode{Val: val}
-		}
+		root.Right = insertIntoBST(root.Right, val)
 	}
 	return root
 }
