@@ -26,34 +26,34 @@ package problem
  * func (this NestedInteger) GetList() []*NestedInteger {}
  */
 
-type NestedIterator struct {
-	nums []int
-}
+// type NestedIterator struct {
+// 	nums []int
+// }
 
-func Constructor(nestedList []*NestedInteger) *NestedIterator {
-	var nums []int
-	var make func(nestedList []*NestedInteger)
-	make = func(nestedList []*NestedInteger) {
-		for _, v := range nestedList {
-			if v.IsInteger() {
-				nums = append(nums, v.GetInteger())
-				continue
-			}
-			make(v.GetList())
-		}
-	}
-	make(nestedList)
-	return &NestedIterator{
-		nums: nums,
-	}
-}
+// func Constructoriiii(nestedList []*NestedInteger) *NestedIterator {
+// 	var nums []int
+// 	var make func(nestedList []*NestedInteger)
+// 	make = func(nestedList []*NestedInteger) {
+// 		for _, v := range nestedList {
+// 			if v.IsInteger() {
+// 				nums = append(nums, v.GetInteger())
+// 				continue
+// 			}
+// 			make(v.GetList())
+// 		}
+// 	}
+// 	make(nestedList)
+// 	return &NestedIterator{
+// 		nums: nums,
+// 	}
+// }
 
-func (this *NestedIterator) Next() int {
-	num := this.nums[0]
-	this.nums = this.nums[1:]
-	return num
-}
+// func (this *NestedIterator) Next() int {
+// 	num := this.nums[0]
+// 	this.nums = this.nums[1:]
+// 	return num
+// }
 
-func (this *NestedIterator) HasNext() bool {
-	return len(this.nums) > 0
-}
+// func (this *NestedIterator) HasNext() bool {
+// 	return len(this.nums) > 0
+// }
