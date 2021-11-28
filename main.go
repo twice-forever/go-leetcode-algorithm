@@ -37,5 +37,7 @@ func main() {
 
 	// fmt.Println(problem.BuildTree2([]int{9, 3, 15, 20, 7}, []int{9, 15, 7, 20, 3}))
 
-	problem.RunTest()
+	// problem.RunTest()
+
+	problem.Constructoriiiii(3, []int{4, 5, 8, 2})
 }
