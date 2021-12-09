@@ -12,5 +12,5 @@ func flipEquiv(root1 *TreeNode, root2 *TreeNode) bool {
 	}
 	left := flipEquiv(root1.Left, root2.Right) || flipEquiv(root1.Left, root2.Left)
 	right := flipEquiv(root1.Right, root2.Left) || flipEquiv(root1.Right, root2.Right)
-	return left || right
+	return left && right
 }
