@@ -7,8 +7,7 @@ func smallestFromLeaf(root *TreeNode) string {
 		if node == nil {
 			return
 		}
-		word := byte('a' + node.Val)
-		words = string(append([]byte{word}, []byte(words)...))
+		words = string(rune('a'+node.Val)) + words
 		if node.Left == nil && node.Right == nil {
 			if ans == "" {
 				ans = words
