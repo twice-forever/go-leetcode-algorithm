@@ -39,5 +39,7 @@ func main() {
 
 	// problem.RunTest()
 
-	problem.Constructoriiiii(3, []int{4, 5, 8, 2})
+	// problem.Constructoriiiii(3, []int{4, 5, 8, 2})
+
+	problem.PathInZigZagTree(14)
 }
