@@ -41,5 +41,7 @@ func main() {
 
 	// problem.Constructoriiiii(3, []int{4, 5, 8, 2})
 
-	problem.PathInZigZagTree(14)
+	// problem.PathInZigZagTree(14)
+
+	problem.LastRemaining(23)
 }
