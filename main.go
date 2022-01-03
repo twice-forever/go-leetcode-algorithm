@@ -43,5 +43,7 @@ func main() {
 
 	// problem.PathInZigZagTree(14)
 
-	problem.LastRemaining(23)
+	// problem.LastRemaining(23)
+
+	problem.DayOfTheWeek(7, 1, 1971)
 }
