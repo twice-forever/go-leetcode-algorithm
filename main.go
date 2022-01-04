@@ -45,5 +45,7 @@ func main() {
 
 	// problem.LastRemaining(23)
 
-	problem.DayOfTheWeek(7, 1, 1971)
+	// problem.DayOfTheWeek(7, 1, 1971)
+
+	problem.ValidateBinaryTreeNodes(4, []int{3, -1, 1, -1}, []int{-1, -1, 0, -1})
 }
