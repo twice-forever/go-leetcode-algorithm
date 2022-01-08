@@ -1,6 +1,6 @@
 package problem
 
-func maxDepth(s string) int {
+func maxDepthii(s string) int {
 	maxNum, curNum := 0, 0
 	for _, v := range s {
 		if v == '(' {
