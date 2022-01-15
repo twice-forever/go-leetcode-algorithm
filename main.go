@@ -53,5 +53,7 @@ func main() {
 
 	// problem.PseudoPalindromicPaths(problem.TestNodeii)
 
-	problem.Trap([]int{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1})
+	// problem.Trap([]int{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1})
+
+	problem.TotalMoney(10)
 }
