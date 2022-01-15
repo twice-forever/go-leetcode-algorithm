@@ -1,35 +1,26 @@
 package problem
 
 func Trap(height []int) int {
-	target, subHeight := []int{}, []int{}
-	hasTwo := false
-	for _, v := range height {
-		if v > 1 {
-			hasTwo = true
-		}
-		if v >= 1 {
-			target = append(target, 1)
-			subHeight = append(subHeight, v-1)
-		} else {
-			target = append(target, v)
-			subHeight = append(subHeight, v)
-		}
+	n := len(height)
+	if n == 0 {
+		return 0
 	}
-	ans, curNum := 0, 0
-	hasLeft := false
-	for _, v := range target {
-		if v != 0 && !hasLeft {
-			hasLeft = true
-		} else if v != 0 && hasLeft {
-			ans += curNum
-			curNum = 0
-		} else if v == 0 && hasLeft {
-			curNum++
-		}
+
+	leftMax := make([]int, n)
+	leftMax[0] = height[0]
+	for i := 1; i < n; i++ {
+		leftMax[i] = max(height[i], leftMax[i-1])
 	}
-	if hasTwo {
-		num := Trap(subHeight)
-		ans += num
+
+	rightMax := make([]int, n)
+	rightMax[n-1] = height[n-1]
+	for i := n - 2; i >= 0; i-- {
+		rightMax[i] = max(height[i], rightMax[i+1])
+	}
+
+	ans := 0
+	for i := 0; i < n; i++ {
+		ans += min(leftMax[i], rightMax[i]) - height[i]
 	}
 	return ans
 }
