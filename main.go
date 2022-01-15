@@ -1,8 +1,6 @@
 package main
 
-import (
-	"leetcode/problem"
-)
+import "leetcode/problem"
 
 func main() {
 	// fmt.Println(problem.TwoSum([]int{2, 7, 11, 15}, 9))
@@ -53,5 +51,7 @@ func main() {
 
 	// problem.IsAdditiveNumber("12122436")
 
-	problem.PseudoPalindromicPaths(problem.TestNodeii)
+	// problem.PseudoPalindromicPaths(problem.TestNodeii)
+
+	problem.Trap([]int{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1})
 }
