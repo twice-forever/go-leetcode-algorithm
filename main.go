@@ -57,5 +57,7 @@ func main() {
 
 	// problem.TotalMoney(10)
 
-	problem.UniquePathsWithObstacles([][]int{{0}, {1}, {1}})
+	// problem.UniquePathsWithObstacles([][]int{{0}, {1}, {1}})
+
+	problem.Robiii([]int{200, 3, 140, 20, 10})
 }
